@@ -109,11 +109,11 @@ namespace Arebis.Logging.GrayLog
         /// <summary>
         /// Helper method to apply GZIP compression.
         /// </summary>
-        protected byte[] Compress(byte[] raw, CompressionLevel compressionLevel)
+        protected byte[] Compress(byte[] raw)
         {
             using (MemoryStream memory = new MemoryStream())
             {
-                using (GZipStream gzip = new GZipStream(memory, compressionLevel, true))
+                using (GZipStream gzip = new GZipStream(memory, CompressionMode.Compress))
                 {
                     gzip.Write(raw, 0, raw.Length);
                 }
@@ -133,7 +133,7 @@ namespace Arebis.Logging.GrayLog
         {
             foreach (PropertyInfo property in source.GetType().GetProperties())
             {
-                target[prefix + property.Name] = property.GetValue(source);
+                target[prefix + property.Name] = property.GetValue(source, null);
             }
         }
 

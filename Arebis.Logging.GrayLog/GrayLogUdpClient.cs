@@ -66,7 +66,7 @@ namespace Arebis.Logging.GrayLog
 
             // Apply compression:
             if (this.CompressionTreshold != -1 && messageBody.Length > this.CompressionTreshold)
-                messageBody = this.Compress(messageBody, CompressionLevel.Optimal);
+                messageBody = this.Compress(messageBody);
 
             using (var objectStream = new MemoryStream(messageBody))
             {

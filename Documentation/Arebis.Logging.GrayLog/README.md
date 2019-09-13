@@ -1,7 +1,7 @@
 Arebis.Logging.GrayLog
 ======================
 
-.NET GrayLog client library written in C#
+.NET GrayLog client library written in C# - Modified to work with .Net Framework 4.0
 
 Features and Limitations
 ------------------------

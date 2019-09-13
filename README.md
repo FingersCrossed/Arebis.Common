@@ -2,6 +2,7 @@ Arebis.Common
 =============
 
 .NET common base library by Arebis.
+Modified to build Arebis.Logging.Graylog with .Net Framework 4.0 by Fingerscrossed
 
 - Arebis.Common
 - Arebis.Contract
